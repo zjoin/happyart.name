@@ -1,0 +1,398 @@
+/* background: #f6e9e0; rgba(246, 233, 224, 1)
+color: #54403f; rgba(84, 64, 63, 1)
+бирюзовый color: #78b3a0;*/
+	* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+	html,
+body {
+	height: 100%;
+	color: #54403f;
+	font-family: Verdana;
+}
+	body {
+	background: #f6e9e0;
+}
+	@font-face {
+	font-family: 'fontleroybrownregular';
+	src: url('../happyfont-webfont-webfont.eot');
+	src: url('../happyfont-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../happyfont-webfont-webfont.woff') format('woff'),
+	url('../happyfont-webfont-webfont.ttf') format('truetype'),
+	url('../happyfont-webfont-webfont.svg#fontleroybrownregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+	/* Start page*/
+	.container-main {
+	max-width: 1400px;
+	min-height: 100%;
+	background: #f6e9e0;
+	margin: auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -moz-box;
+	display: flex;
+}
+	.header {
+	background: #f6e9e0;
+	-webkit-box-ordinal-group: 3;
+	-webkit-order: 2;
+	-moz-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+	order: 2;
+	-webkit-box-flex: 7;
+	-webkit-flex: 7;
+	-moz-box-flex: 7;
+	-ms-flex: 7;
+	flex: 7;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
+}
+	.header > h1 {
+	margin: 0;
+	padding: 0;
+	font-family: 'fontleroybrownregular';
+	font-weight: normal;
+	font-size: 10em;
+	text-align: center;
+}
+	.header .after-brand {
+	font-family: Verdana;
+	position: absolute;
+	top: 2.5rem;
+	left: 480px;
+	font-family: 'fontleroybrownregular';
+	font-size: 2em;
+	letter-spacing: 7px;
+	top: 1em;
+	left: 15em;
+	color: #78b3a0;
+}
+	.b {
+	padding: 5rem;
+}
+	.b p {
+	line-height: 1.5em;
+	padding: 1rem;
+}
+	.boss {
+	width: 350px;
+	float: left;
+	margin-right: 2rem;
+}
+	.header > blockquote {
+	position: absolute;
+	bottom: 1em;
+	left: 340px;
+	font-family: 'fontleroybrownregular';
+	font-size: 2em;
+	font-weight: bold;
+}
+	.sell {
+	padding: 4rem;
+	line-height: 1.5rem;
+}
+	/*#################################*/
+	.navigation {
+	background: #78b3a0;
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	-moz-box-flex: 2;
+	-ms-flex: 2;
+	flex: 2;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	position: relative;
+}
+	.navigation > .purchase-trash {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	-webkit-box-flex: 2;
+	-moz-box-flex: 2;
+	flex: 2;
+}
+	/* ====== Починить ховер */
+	.cart:hover {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+	.navigation .md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+	.navigation .md-show {
+	visibility: visible;
+}
+	.navigation .md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.5);
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+	.navigation .md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+	.navigation .md-content {
+	background: white;
+	position: relative;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+	.navigation .md-content h3 {
+	margin: 0;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: 300;
+	opacity: 0.8;
+	background: rgba(0,0,0,0.1);
+	border-radius: 3px 3px 0 0;
+}
+	.navigation .md-content > div {
+	padding: 15px 40px 30px;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1.15em;
+}
+	.navigation .md-content > div p {
+	margin: 0;
+	padding: 10px 0;
+}
+	.navigation .md-content > div ul {
+	margin: 0;
+	padding: 0 0 30px 20px;
+}
+	.navigation .md-content > div ul li {
+	padding: 5px 0;
+}
+	.navigation .md-effect-1 .md-content {
+	-webkit-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	transition: all 0.6s;
+}
+	.navigation .md-show.md-effect-1 .md-content {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+	.navigation .md-trigger {
+	border: none;
+	cursor: pointer;
+	padding: 5px;
+	margin: 5px 0px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	outline: none;
+	background: #78b3a0;
+	color: rgba(84, 64, 63,1);
+	position: absolute;
+	left: 40px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+	font-size: .7rem;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	text-align: right;
+	overflow: hidden;
+}
+	.navigation .md-trigger:hover {
+	color: #f6e9e0;
+}
+	.navigation .price {
+	font-size: .9rem;
+	background: rgba(84, 64, 63,1);
+	color: #f6e9e0;
+	padding: 8px 20px;
+	margin-left: 90px;
+	display: inline-block;
+	width: 120px;
+	text-align: center;
+}
+	.navigation .price {
+	margin-top: 10px;
+}
+	.navigation > .navbar {
+	-webkit-box-flex: 3;
+	-webkit-flex: 3;
+	-moz-box-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
+	/*border: 1px solid #666;*/
+	margin-top: 7.5em;
+}
+	.navbar > ul {
+	list-style: none;
+	line-height: 3.5em;
+	margin: 0;
+	padding: 0;
+}
+	.navbar > ul > li {
+	margin: 0;
+	padding: 0 2em;
+}
+	.navbar > ul > li a {
+	color: #54403f;
+	text-decoration: none;
+	display: block;
+	font-size: 1.2em;
+}
+	.navbar > ul > li > a::before {
+	content: attr(data-hover);
+	position: absolute;
+	color: #f6e9e0;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+	.navbar > ul > li > a:hover::before {
+	opacity: 0;
+	-webkit-transform: scale(.9);
+	-0-transform: scale(.9);
+	-ms-transform: scale(.9);
+	transform: scale(.9);
+}
+	.navbar .active {
+	color: #54403f;
+}
+	.navigation >.social-icons {
+	color: #54403f;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	margin-bottom: 2em;
+}
+	.navigation >.address {
+	-webkit-box-flex: 3;
+	-webkit-flex: 3;
+	-moz-box-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font-size: small;
+	margin-left: 2em;
+}
+	.home {
+	margin-left: 25px;
+	font-family: Verdana;
+	line-height: 1.5em;
+}
+	.home:first-line {
+	font-weight: 700;
+}
+	.fa {
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+	.social-icons .fa:hover {
+	color: #f6e9e0;
+	cursor: pointer;
+}
+	.effect-bottom-line {
+	padding: 10px 20px;
+	width: 150px;
+	text-align: center;
+	color: #fff;
+	margin-left: 1.5rem;
+	background: #54403f;
+	margin-top: 1.2rem;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+	cursor: pointer;
+}
+	.effect-bottom-line a {
+	text-decoration: none;
+}
+	/*################################*/
+	.line {
+	background: #78b3a0;
+	-webkit-box-ordinal-group: 3;
+	-webkit-order: 2;
+	-moz-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+	order: 2;
+	width: 4%;
+}
+	/*==== Адаптпция в разработке  */
+	@media screen and (max-width: 1290px) {
+	body {
+	display: none;
+	}
+}

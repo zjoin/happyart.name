@@ -1,0 +1,62 @@
+#content {
+    margin: 0 auto;
+    min-width: 960px;
+    /* max-width: 1140px;*/
+    height: auto;
+}
+    .blueberry {
+    max-width: 960px;
+}
+    .blueberry {
+    margin: 0 auto;
+}
+    .blueberry .slides {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    /*  margin-top: em;*/
+}
+    .blueberry .slides li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+    .blueberry .slides li img {
+    display: block;
+    width: 100%;
+    /* max-width: none;*/
+}
+    .blueberry .slides li.active {
+    display: block;
+    position: relative;
+}
+    .blueberry .crop li img {
+    width: 100%;
+}
+    .blueberry .pager {
+    height: 40px;
+    text-align: center;
+}
+    .blueberry .pager li {
+    display: inline-block;
+}
+    .blueberry .pager li a,
+.blueberry .pager li a span {
+    display: block;
+    height: 6px;
+    width: 6px;
+}
+    .blueberry .pager li a {
+    padding: 18px 8px;
+    border-radius: 6px;
+}
+    .blueberry .pager li a span {
+    overflow: hidden;
+    background: #78b3a0;
+    text-indent: -9999px;
+    border-radius: 50%;
+}
+    .blueberry .pager li.active a span {
+    background: #404040;
+}
